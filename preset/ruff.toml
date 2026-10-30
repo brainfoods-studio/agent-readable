@@ -1,0 +1,27 @@
+# Agent Rules lint preset for ruff (https://beta.llmgraph.in/agent-readable/)
+# Copy the [lint] table into ruff.toml, or into pyproject.toml as [tool.ruff.lint].
+# Every code below is listed on the rule page named next to it.
+
+[lint]
+extend-select = [
+  # core: low noise, safe on an existing codebase
+  "F403",    # AR-01 star import
+  "F405",    # AR-01 name that may come from a star import
+  "F811",    # AR-03 name redefined before use
+  "F822",    # AR-02 __all__ lists a name the module doesn't define
+  "ICN001",  # AR-04 unconventional import alias
+  "PLC0414", # AR-04 useless import alias
+  "B009",    # AR-07 getattr with a constant name
+  "B010",    # AR-07, AR-18, AR-19 setattr with a constant name
+  "S102",    # AR-10 exec
+  "S307",    # AR-10 eval
+  "PLW0603", # AR-20 global statement rebinding a module global
+  "PT008",   # AR-18, AR-35 lambda as a patch replacement
+  "PT019",   # AR-34, AR-35 fixture taken only for its side effect
+  "FAST002", # AR-33 FastAPI dependency not in Annotated
+  "DJ013",   # AR-31 decorator placed above @receiver
+]
+
+# strict tier: turn on in the paths agents edit (AR-13, AR-14, AR-15, AR-16)
+# [lint.per-file-ignores] or a separate ruff.toml in that folder:
+# extend-select = ["ANN001", "ANN201", "ANN401"]

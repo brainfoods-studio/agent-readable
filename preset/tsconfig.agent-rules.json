@@ -1,0 +1,8 @@
+{
+  "//": "Agent Rules preset for tsc (https://beta.llmgraph.in/agent-readable/). Extend it from your tsconfig.json: \"extends\": \"./tsconfig.agent-rules.json\".",
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true
+  }
+}

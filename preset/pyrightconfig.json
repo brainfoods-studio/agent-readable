@@ -1,0 +1,10 @@
+{
+  "//": "Agent Rules preset for pyright (https://beta.llmgraph.in/agent-readable/). Standard mode for the repo, strict for the paths agents edit (AR-17). Replace src/core with your paths.",
+  "typeCheckingMode": "standard",
+  "strict": ["src/core"],
+  "reportMatchNotExhaustive": "error",
+  "reportPossiblyUnboundVariable": "error",
+  "reportUntypedFunctionDecorator": "error",
+  "reportMissingParameterType": "error",
+  "reportWildcardImportFromLibrary": "error"
+}
